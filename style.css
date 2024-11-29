@@ -1,0 +1,284 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: rgb(6, 23, 154);
+}
+
+/* Main Section */
+.main {
+  height: 1000px;
+  margin-left: 300px;
+  margin-top: 70px;
+  margin-right: 70px;
+  margin-bottom: 70px;
+  background-color:  rgb(6, 23, 154);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 400px 400px 200px 200px;
+  grid-template-rows: 200px 20px;
+  background-color:  rgb(6, 23, 154);
+  grid-gap: 10px;
+}
+
+/* Grid Item Styling */
+.grid1, .grid2, .grid3 {
+  background-color: rgba(0, 255, 255, 0.71);
+}
+
+.grid2 {
+  background-color: rgb(136, 0, 255);
+}
+
+.grid3 {
+  background-image: url('ff.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+/* Typography */
+h1 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+  font-weight: normal; /* Corrected the invalid font-weight */
+}
+
+p, span, h3 {
+  color: aliceblue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+span {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+h2 {
+  margin-left: 270px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
+  font-size: 100px;
+  margin-top: -90px;
+}
+
+h3 {
+  color: aliceblue;
+  margin-top: -40px;
+  margin-left: 300px;
+}
+
+/* Grid 4 Layout */
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-gap: 10px;
+}
+
+.one, .two, .three, .four {
+  height: 95px;
+}
+
+.one {
+  background-color: rgb(151, 255, 16);
+  
+}
+
+.icon1{
+  overflow-wrap: break-word;
+  height: 50px;
+  width: 50px;
+ margin-left: 20px;
+ margin-top: 20px;
+
+}
+.icon2{
+   width:100%;
+   height: 200px;
+}
+.two {
+  background-color: rgb(255, 0, 0);
+}
+
+.three {
+  background-color: burlywood;
+}
+
+.four {
+  background-color: chocolate;
+}
+
+/* Second Grid */
+.second {
+  display: grid;
+  grid-template-columns: 400px 400px 200px 200px;
+  grid-template-rows: 200px 20px;
+  background-color:  rgb(6, 23, 154);
+  grid-gap: 8px;
+}
+
+.box1, .box2, .box3, .box4, .box5 {
+  background-color: cadetblue;
+}
+.icon3{
+  width: 401px;
+  height: 430px;
+}
+.box2 {
+  height: 430px;
+  position: relative; /* Add position for z-index to work */
+  z-index: 2;
+}
+
+.icon4{
+ width: 198px;
+}
+.icon5{
+  width: 200px;
+  height: 200px;
+}
+
+
+.icon6{
+  width: 190px;
+  height: 200px;
+}
+.icon7{
+    width: 413px;
+}
+
+/* Third Grid */
+.third {
+  display: grid;
+  grid-template-columns: 200px 190px 200px 190px 410px;
+  grid-template-rows: 200px;
+  background-color:  rgb(6, 23, 154);
+  grid-gap: 10px;
+}
+
+.rox1, .rox2, .rox3, .rox4, .rox5 {
+  background-color: rgb(42, 163, 165);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 1024px) {
+  /* Adjust main margin for tablets */
+  .main {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+
+  /* Stack grid items vertically on medium screens */
+  .grid {
+      grid-template-columns: 1fr 1fr;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  h1 {
+      font-size: 28px;
+  }
+
+  h2 {
+      font-size: 50px;
+      margin-left: 0;
+      margin-top: 0;
+  }
+
+  /* Adjust span and h3 font sizes */
+  span {
+      font-size: 12px;
+  }
+
+  h3 {
+      font-size: 18px;
+      margin-left: 20px;
+  }
+
+  /* Modify second grid to stack columns */
+  .second {
+      grid-template-columns: 1fr 1fr;
+  }
+
+  /* Adjust grid layout for smaller screens */
+  .third {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Reduce grid gaps on smaller screens */
+  .grid, .second, .third {
+      grid-gap: 5px;
+  }
+
+  /* Stack items for smaller columns in grid4 */
+  .grid4 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Responsive Design for Mobile (Portrait) */
+@media (max-width: 768px) {
+  /* Stack grid items vertically on smaller screens */
+  .grid {
+      grid-template-columns: 1fr;
+  }
+
+  .second {
+      grid-template-columns: 1fr;
+  }
+
+  .third {
+      grid-template-columns: 1fr 1fr;
+  }
+
+  /* Adjust font sizes */
+  h1 {
+      font-size: 24px;
+  }
+
+  h2 {
+      font-size: 40px;
+  }
+
+  span {
+      font-size: 10px;
+  }
+
+  h3 {
+      font-size: 16px;
+  }
+
+  /* Adjust padding and margins */
+  .main {
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+
+  .box2 {
+      height: auto; /* Allow box2 to adjust height on smaller screens */
+  }
+
+  /* Adjust background images */
+  .grid3 {
+      background-size: contain;
+      background-position: center;
+  }
+}
+ 
+
+
+.icon1{
+
+
+}
